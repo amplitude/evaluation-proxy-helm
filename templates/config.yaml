@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: "{{ include "evaluation-proxy.name" . }}-config"
+  labels:
+    {{- include "evaluation-proxy.labels" . | nindent 4 }}
+data:
+  evaluation-proxy-config.yaml: |
+    {{- toYaml .Values.evaluationProxy | nindent 4}}
