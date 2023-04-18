@@ -4,17 +4,18 @@ A Helm Chart for deploying the Amplitude Experiment [Evaluation Proxy](https://d
 
 ### Resources
 
-| Link                                                                                      | Description                                                                                   |
-|-------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------|
-| [Developer Docs](https://docs.developers.amplitude.com/experiment/infra/evaluation-proxy) | Full documentation about the evaluation proxy. **Contains more details about configuration.** |
-| [Helm Example](https://github.com/amplitude/tree/main/example)                            | Run the evaluation proxy using this helm chart locally using `minikube`                       |
+| Link                                                                                      | Description                                                                                                                                                                        |
+|-------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [Developer Docs](https://docs.developers.amplitude.com/experiment/infra/evaluation-proxy) | Full documentation about the evaluation proxy. Contains more details about [configuration](https://docs.developers.amplitude.com/experiment/infra/evaluation-proxy#configuration). |
+| [Helm Example](https://github.com/amplitude/tree/main/example)                            | Run the evaluation proxy using this helm chart locally using `minikube`                                                                                                            |
 
 
 ## Install
 
 ### Add repo
+
 ```
-helm repo add https://amplitude.github.io/evaluation-proxy-helm
+helm repo add amplitude/evaluation-proxy https://amplitude.github.io/evaluation-proxy-helm
 ```
 
 ### Configure `values.yaml`
@@ -48,7 +49,7 @@ evaluationProxy:
 ### Install chart
 
 ```
-helm install -f values.yaml evaluation-proxy amplitudeinc/evaluation-proxy
+helm install -f values.yaml evaluation-proxy amplitude/evaluation-proxy
 ```
 
 ## Example

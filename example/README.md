@@ -26,6 +26,6 @@ Update the fields in the `values.yaml` file:
 ## Install Evaluation Proxy Helm Chart
 
 ```
-helm repo add https://amplitude.github.io/evaluation-proxy-helm
-helm install -f values.yaml evaluation-proxy amplitudeinc/evaluation-proxy
+helm repo add amplitude/evaluation-proxy https://amplitude.github.io/evaluation-proxy-helm
+helm install -f values.yaml evaluation-proxy amplitude/evaluation-proxy
 ```
