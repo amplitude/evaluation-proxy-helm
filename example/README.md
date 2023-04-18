@@ -15,9 +15,9 @@ Use the local `redis-values.yaml` file to install the [redis helm chart from bit
 helm install -f redis-values.yaml redis bitnami/redis
 ```
 
-## Configure `evaluation-proxy-values.yaml`
+## Configure `values.yaml`
 
-Update the fields in the `evaluation-proxy-values.yaml` file:
+Update the fields in the `values.yaml` file:
 1. `projects.id`: The Amplitude project ID. Can be found in the project's settings in Amplitude.
 2. `projects.apiKey`: The project's API key. Can be found in the project's settings in Amplitude.
 3. `projects.secretKey`: The project's secret key. Can be found in the project's settings in Amplitude.
@@ -27,5 +27,5 @@ Update the fields in the `evaluation-proxy-values.yaml` file:
 
 ```
 helm repo add https://amplitude.github.io/evaluation-proxy-helm
-helm install -f evaluation-proxy-values.yaml evaluation-proxy amplitudeinc/evaluation-proxy
+helm install -f values.yaml evaluation-proxy amplitudeinc/evaluation-proxy
 ```
