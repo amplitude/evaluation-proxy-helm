@@ -22,7 +22,7 @@ helm repo add amplitude/evaluation-proxy https://amplitude.github.io/evaluation-
 
 Configure the chart values. The recommended approach to configuring and installing the helm chart is using a values.yaml configuration file.
 
-The chart's `evaluationHeader` value contents exactly match the evaluation proxy's configuration file fields. Amplitude's developer docs contains [additional information and configuration options](https://docs.developers.amplitude.com/experiment/infra/evaluation-proxy#configuration).
+The chart's `evaluationProxy` value contents exactly match the evaluation proxy's configuration file fields. Amplitude's developer docs contains [additional information and configuration options](https://docs.developers.amplitude.com/experiment/infra/evaluation-proxy#configuration).
 
 ```yaml
 evaluationProxy:
