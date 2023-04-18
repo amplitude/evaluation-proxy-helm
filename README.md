@@ -37,11 +37,13 @@ evaluationProxy:
 #      uri: "redis://redis-master.default.svc.cluster.local:6379"
 ```
 
-- `projects.id`: The Amplitude project ID. Can be found in the project's settings in Amplitude.
-- `projects.apiKey`: The project's API key. Can be found in the project's settings in Amplitude.
-- `projects.secretKey`: The project's secret key. Can be found in the project's settings in Amplitude.
-- `projects.deploymentKeys`: The deployment keys to manage. Listed deployment keys have associated flags and cohorts downloaded and managed by the proxy. The deployment keys listed here must be associated with the project identified in the other fields.
-- `configuration.redis.uri`: The uri for connecting to redis within the cluster. If missing, the proxy will run in memory.
+| Value                     | Description                                                                                                                                                                                                                      |
+|---------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `projects.id`             | The Amplitude project ID. Can be found in the project's settings in Amplitude.                                                                                                                                                   |
+| `projects.apiKey`         | The project's API key. Can be found in the project's settings in Amplitude.                                                                                                                                                      |
+| `projects.secretKey`      | The project's secret key. Can be found in the project's settings in Amplitude.                                                                                                                                                   |
+| `projects.deploymentKeys` | The deployment keys to manage. Listed deployment keys have associated flags and cohorts downloaded and managed by the proxy. The deployment keys listed here must be associated with the project identified in the other fields. |
+| `configuration.redis.uri` | The uri for connecting to redis within the cluster. If missing, the proxy will run in memory.                                                                                                                                    |
 
 ### Install chart
 
