@@ -51,7 +51,3 @@ evaluationProxy:
 ```
 helm install -f values.yaml evaluation-proxy amplitude/evaluation-proxy
 ```
-
-## Example
-
-This repository also contains an example of running the helm deployed proxy with redis persistence locally using `minikube`.
