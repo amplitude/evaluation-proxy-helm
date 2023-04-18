@@ -1,0 +1,10 @@
+evaluationProxy:
+  projects:
+    - id: "TODO"
+      apiKey: "TODO"
+      secretKey: "TODO"
+      deploymentKeys:
+        - "TODO"
+  configuration:
+    redis:
+      uri: "redis://redis-master.default.svc.cluster.local:6379"

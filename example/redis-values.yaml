@@ -1,0 +1,7 @@
+architecture: standalone
+auth:
+  # Enabling authentication requires updating `configuration.redis.uri` in `evaluation-proxy-values.yaml`
+  enabled: false
+master:
+  # Allow using FLUSHALL.
+  disableCommands: []
