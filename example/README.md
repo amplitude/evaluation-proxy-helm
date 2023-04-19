@@ -29,3 +29,24 @@ Update the fields in the `values.yaml` file:
 helm repo add evaluation-proxy-helm https://amplitude.github.io/evaluation-proxy-helm
 helm install -f values.yaml evaluation-proxy evaluation-proxy-helm/evaluation-proxy
 ```
+
+## Evaluate a user using the proxy
+
+You can use `minikube` to set up [NodePort access](https://minikube.sigs.k8s.io/docs/handbook/accessing/#nodeport-access) with your local cluster:
+
+```
+minikube service evaluation-proxy --url
+```
+
+This command will print a localhost link with a port. Use the uri to configure an SDK's `serverUrl` config or cURL a request using the [Evaluation API](https://docs.developers.amplitude.com/experiment/apis/evaluation-api/).
+
+1. Replace `<PORT>` with the port returned by `minikube service` 
+2. Replace `<DEPLOYMENT_KEY>` with a deployment key being managed by the proxy
+3. Replace `<USER_ID>` with the user ID to evaluate. You can also include device ID and additional context in the query params.
+
+```
+curl --request GET \
+     --url 'http://localhost:<PORT>/v1/vardata?user_id=<USER_ID>' \
+     --header 'Authorization: Api-Key <DEPLOYMENT_KEY>'
+```
+
