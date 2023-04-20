@@ -38,7 +38,7 @@ jobs:
         uses: jacobtomlinson/gha-find-replace@v2
         with:
           find: 'version: .*'
-          replace: 'version = "${{ github.event.inputs.chart-version }}"'
+          replace: 'version: ${{ github.event.inputs.chart-version }}'
           include: 'charts/evaluation-proxy/Chart.yaml'
           regex: true
 
@@ -46,7 +46,7 @@ jobs:
         uses: jacobtomlinson/gha-find-replace@v2
         with:
           find: 'appVersion: ".*"'
-          replace: 'version = "${{ github.event.inputs.chart-version }}"'
+          replace: 'appVersion: "${{ github.event.inputs.chart-version }}"'
           include: 'charts/evaluation-proxy/Chart.yaml'
           regex: true
 
