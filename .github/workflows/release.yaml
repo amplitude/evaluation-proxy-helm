@@ -2,6 +2,15 @@ name: Release
 
 on:
   workflow_dispatch:
+    inputs:
+      chart-version:
+        required: true
+        type: string
+        description: Chart Version
+      proxy-version:
+        required: true
+        type: string
+        description: Evaluation Proxy Version
 
 jobs:
   release:
@@ -25,7 +34,23 @@ jobs:
       - name: Helm Lint
         run: helm lint charts/evaluation-proxy
 
-      - name: Run chart-releaser
-        uses: helm/chart-releaser-action@v1.5.0
-        env:
-          CR_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+      - name: Set Chart Version
+        uses: jacobtomlinson/gha-find-replace@v2
+        with:
+          find: 'version: .*'
+          replace: 'version = "${{ github.event.inputs.chart-version }}"'
+          include: 'charts/evaluation-proxy/Chart.yaml'
+          regex: true
+
+      - name: Set Chart Version
+        uses: jacobtomlinson/gha-find-replace@v2
+        with:
+          find: 'appVersion: ".*"'
+          replace: 'version = "${{ github.event.inputs.chart-version }}"'
+          include: 'charts/evaluation-proxy/Chart.yaml'
+          regex: true
+
+#      - name: Run chart-releaser
+#        uses: helm/chart-releaser-action@v1.5.0
+#        env:
+#          CR_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
