@@ -28,23 +28,20 @@ The chart's `evaluationProxy` value contents exactly match the evaluation proxy'
 evaluationProxy:
   # At least one project is required.
   projects:
-    - id: "TODO"
-      apiKey: "TODO"
+    - apiKey: "TODO"
       secretKey: "TODO"
-      deploymentKeys:
-        - "TODO"
+      managementKey: "TODO"
   configuration: {}
 #    redis:
 #      uri: "redis://redis-master.default.svc.cluster.local:6379"
 ```
 
-| Value                     | Description                                                                                                                                                                                                                      |
-|---------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `projects.id`             | The Amplitude project ID. Can be found in the project's settings in Amplitude.                                                                                                                                                   |
-| `projects.apiKey`         | The project's API key. Can be found in the project's settings in Amplitude.                                                                                                                                                      |
-| `projects.secretKey`      | The project's secret key. Can be found in the project's settings in Amplitude.                                                                                                                                                   |
-| `projects.deploymentKeys` | The deployment keys to manage. Listed deployment keys have associated flags and cohorts downloaded and managed by the proxy. The deployment keys listed here must be associated with the project identified in the other fields. |
-| `configuration.redis.uri` | The uri for connecting to redis within the cluster. If missing, the proxy will run in memory.                                                                                                                                    |
+| Value                     | Description                                                                                                                                                                             |
+|---------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `projects.apiKey`         | The project's API key. Can be found in the project's settings in Amplitude.                                                                                                             |
+| `projects.secretKey`      | The project's secret key. Can be found in the project's settings in Amplitude.                                                                                                          |
+| `projects.managementKey`  | The Experiment management api key. Must be created for the same project as the configured API and secret key. Used to automatically access and update deployments used for the project. |
+| `configuration.redis.uri` | The uri for connecting to redis within the cluster. If missing, the proxy will run in memory.                                                                                           |
 
 ### Install chart
 

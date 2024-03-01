@@ -18,10 +18,9 @@ helm install -f redis-values.yaml redis bitnami/redis
 ## Configure `values.yaml`
 
 Update the fields in the `values.yaml` file:
-1. `projects.id`: The Amplitude project ID. Can be found in the project's settings in Amplitude.
-2. `projects.apiKey`: The project's API key. Can be found in the project's settings in Amplitude.
-3. `projects.secretKey`: The project's secret key. Can be found in the project's settings in Amplitude.
-4. `projects.deploymentKeys`: The deployment keys to manage. Listed deployment keys have associated flags and cohorts downloaded and managed by the proxy. The deployment keys listed here must be associated with the project identified in the other fields.
+1. `projects.apiKey`: The project's API key. Can be found in the project's settings in Amplitude.
+2. `projects.secretKey`: The project's secret key. Can be found in the project's settings in Amplitude.
+3. `projects.managementKey`: The Experiment management api key. Must be created for the same project as the configured API and secret key. Used to automatically access and update deployments used for the project.
 
 ## Install Evaluation Proxy Helm Chart
 
