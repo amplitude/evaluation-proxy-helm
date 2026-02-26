@@ -1,13 +1,13 @@
 # Evaluation Proxy Helm Chart
 
-A Helm Chart for deploying the Amplitude Experiment [Evaluation Proxy](https://docs.developers.amplitude.com) on Kubernetes.
+A Helm Chart for deploying the Amplitude Experiment [Evaluation Proxy](https://docs.developers.amplitude.com/experiment/infra/evaluation-proxy) on Kubernetes.
 
 ### Resources
 
 | Link                                                                                      | Description                                                                                                                                                                        |
 |-------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | [Developer Docs](https://docs.developers.amplitude.com/experiment/infra/evaluation-proxy) | Full documentation about the evaluation proxy. Contains more details about [configuration](https://docs.developers.amplitude.com/experiment/infra/evaluation-proxy#configuration). |
-| [Helm Example](https://github.com/amplitude/tree/main/example)                            | Run the evaluation proxy using this helm chart locally using `minikube`                                                                                                            |
+| [Helm Example](https://github.com/amplitude/evaluation-proxy-helm/tree/main/example)       | Run the evaluation proxy using this helm chart locally using `minikube`                                                                                                            |
 
 
 ## Install
