@@ -2,6 +2,19 @@ apiVersion: v1
 entries:
   evaluation-proxy:
   - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2026-02-26T01:23:49.104538116Z"
+    description: A Helm chart for deploying the Amplitude evaluation proxy on Kubernetes.
+    digest: 8d016cd3654445d09bae1abb7ff00a7670bf582290066ad0853cbb1961cd6152
+    icon: https://github.com/amplitude/evaluation-proxy-helm/raw/main/icon.png
+    name: evaluation-proxy
+    sources:
+    - https://github.com/amplitude/evaluation-proxy-helm
+    type: application
+    urls:
+    - https://github.com/amplitude/evaluation-proxy-helm/releases/download/evaluation-proxy-1.0.0/evaluation-proxy-1.0.0.tgz
+    version: 1.0.0
+  - apiVersion: v2
     appVersion: 0.4.5
     created: "2024-03-01T17:27:38.181593532Z"
     description: A Helm chart for deploying the Amplitude evaluation proxy on Kubernetes.
@@ -53,4 +66,4 @@ entries:
     urls:
     - https://github.com/amplitude/evaluation-proxy-helm/releases/download/evaluation-proxy-0.0.2/evaluation-proxy-0.0.2.tgz
     version: 0.0.2
-generated: "2024-03-01T17:27:38.18161387Z"
+generated: "2026-02-26T01:23:49.104561807Z"
